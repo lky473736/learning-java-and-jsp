@@ -64,3 +64,29 @@ public class testServlet extends HttpServlet {
 	- 서버의 f01이라고 하는 폴더 안에 있는 test_srv라고 하는 것이 서블릿임
 	- 서블릿은 일종의 자원 (프로그램) 
 */
+
+
+/*
+	- JSP
+		- 서블릿 안에 HTML와 데이터 결합을 손쉽게 처리하기 위해 만들어짐
+		- 일일히 태그를 입력하고 이러기엔 너무 어려움. 그래서 HTML 문서 위에 자바소스코드를 적는 것임 (ejs처럼)
+		- HTML 파일에 자바 코드를 심는 형태(JSP) vs 자바 코드에 HTML 파일을 심는 형태(서블릿)
+		- <%= %> 안에 코드 혹은 데이터 작성
+		- JSP는 page 지시어 부분만 제외하면 HTML 파일 구조랑 동일
+		- CSS, 자바스크립트 또한 안에 넣을 수 있음
+		- 서블릿으로 변환되어 실행됨 
+			- 컨테이너에 의해 서블릿 형태로 변환 후 컴파일되어 컨테이너에 적재되는 구조임
+			- 결국엔 JSP가 서블릿으로 변환되어 실행되는 거니깐 JSP 또한 서블릿의 전단계가 됨
+		
+	- 웹 개발 history (백엔드)
+		- HTML : 정적 웹 -> 동적 웹으로 이동하기 위함
+		- servlet : 동적 웹을 구성하기 위함 -> 태그 사용하기 불편
+		- JSP : Java server page
+		- MVC : MVC패턴 
+			- Model, View, Controller
+				- Model : 비지니스 논리 (엑세스)
+				- View : JSP (프론트엔드)
+				- Controller : Servlet (백엔드)
+			- 각각이 모듈화되어 있어서 유지보수가 쉽고 개발을 따로 분리하여 할 수 있음 (각각 별도로 개발해서 합칠 수도 있고, 협업에도 유리함)
+		- MVC Framework : 여기서 백엔드를 많이 함 (spring, express, fastapi...)
+*/
