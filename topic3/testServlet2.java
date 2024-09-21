@@ -44,6 +44,17 @@ public class testServlet extends HttpServlet {
 		for (int i = 0; i < 10; i++) {
 		    out.print("<h4>" + i + "</h4>");
 		}
+
+		/////
+		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html; charset=utf-8");
+		/////
+		out.print("<meta charset='UTF-8'>");
+		out.print("<h1>안녕 클라이언트</h1>");  
+		
+		// 한글을 출력하였지만 브라우저에 나타나는 것은 ??????? 
+		// -> 인코딩 타입 지정, 49, 50번줄 추가
+		}
 	}
 }
 
