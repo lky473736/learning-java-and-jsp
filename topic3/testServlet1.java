@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class testServlet
  */
-@WebServlet("/testServlet") // 이게 일종의 라우터임. 이 파일은 localhost:8080/파일명/testServlet에 들어가면 실행됨 
+@WebServlet("/testServlet1") // 이게 일종의 라우터임. 이 파일은 localhost:8080/파일명/testServlet에 들어가면 실행됨 
 public class testServlet extends HttpServlet { // HttpServlet을 상속하고 있다
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public testServlet() {
+    public testServlet1() {
         super();
         // TODO Auto-generated constructor stub
     }
