@@ -1,6 +1,8 @@
 package com.test;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -9,16 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class login
+ * Servlet implementation class welcome
  */
-@WebServlet("/login")
-public class login extends HttpServlet {
+@WebServlet("/welcome2")
+public class welcome2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public login() {
+    public welcome2() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,18 +29,22 @@ public class login extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+		// TODO Auto-generated method stub
 		
-		if (username != null && password != null) {
-			Cookie cookie = new Cookie("username", username);
-			response.addCookie(cookie); // 쿠키 추가
-		}
+		response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
 		
-		else {
-			;
-		}
+		Cookie[] cookies = request.getCookies();
 		
-		response.sendRedirect(request.getContextPath() + "/welcome1");
+		int token = 0;
+		
+		if (cookies != null) {
+			for (Cookie cookie : cookies) {
+				if (cookie.getName().equals("username")) {
+					
+					out.print("welcome2 : 안녕하세요, "+cookie.getValue()+"<br>");
+				}
+			}
+	}
 }
 }
