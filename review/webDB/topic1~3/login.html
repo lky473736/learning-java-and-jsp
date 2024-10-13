@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/main.css">
+    <title>회원가입 페이지</title>
+</head>
+<body>
+    <form action="LoginServlet" method="GET" class="form-box"> 
+    <!-- LoginServlet : 서버프로그램명 (이 페이지에서 데이터 받아서 처리할 프로그램)-->
+        <h3>login</h3>
+        <label for="inputid">input ID</label>
+        <input id="inputid" name="username" placeholder="ID.">
+        <br>
+
+        <label for="inputpw">input password</label>
+        <input type="password" id="inputpw" name="password" placeholder="PW">
+        <button type="submit">login</button>
+    </form>
+</body>
+</html>
