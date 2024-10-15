@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class jsp
  */
 @WebServlet("/findGender")
-public class jsp extends HttpServlet {
+public class findGender extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public jsp() {
+    public findGender() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -67,6 +67,6 @@ public class jsp extends HttpServlet {
  *  - sendRedirect의 특징은 데이터를 공유할 수 없다는 것 (다른 웹페이지에서 실행 중이던 데이터를 넘길 수 없음)
  * 
  * 위 특징을 해결하기 위한 웹페이지 간 정보 공유 방법:
- *  1) session을 이용하는 방법
+ *  1) session을 이용하는 방법, cookie를 이용하는 방법
  *  2) query string을 사용하는 방법
  */
